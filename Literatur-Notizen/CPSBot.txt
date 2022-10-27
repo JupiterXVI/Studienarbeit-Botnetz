@@ -1,1 +1,26 @@
-Notizen zu CPSBot Artikel
+CPSBot Artikel
+
+Klassische IoT Botnetze:
+Mirai, Persirai
+
+Typische Attacken:
+Identitätsraub, Spam, DDoS, Malware-Verteilung
+
+CPSBot ist ein Framework (habe keinen Zugriff/ benutzermöglichkeit gefunden) -> Zugriff und Steuerung von cyber-physischen Geräten
+Nutzt die Struktur des MQTT Portokolls als C&C über dessen Modbus/TCP
+-> Publisher-Subscriber - Paradigma
+
+5 - Infectionsphasen
+-> Initial Infection -> Nutzen einer Schwachstelle - Host wird einc Bot-Kandidat
+-> Second Infection -> Lade, Installiere und füher weitere Malware auf Host aus
+-> Rallying -> Stelle eine Verbindung zum C&C auf (z.b. DNS fast-flux)
+-> Attack -> führe Angriffe mit dem Bot aus, oder Lade Daten herunter etc.
+-> Maintenance -> bereite weitere Attacken vor oder stärke das Botnets
+
+Begriffe:
+Host -> Bot
+C&C Infrastructur -> Botmaster
+
+C&C Networkarchitektur:
+Zentralisiert -> ein Botmaster server -> Single-Point-of-Failure
+Dezentralisiert -> Peer-to-Peer Komunikation für ein Überliegendes Kontrollsystem 
