@@ -1,0 +1,13 @@
+BSF - Botnet Simulation Framework
+(https://hakin9.org/bsf-botnet-simulation-framework/)
+Umgebung um Schutzmechanismen gegen Botnetze zu erproben
+
+Tool welches die Arbeitweise der eingestellten Botnetze visualisiert
+Die Botnetze sind dabei variable einstellbar um möglichst viele Angriffspunkte zu finden, welche verschlossen werden können
+
+Benötigt werden:
+OMNet++ --> ist das Simulations Framework (kostenfrei) (Tutorial: https://docs.omnetpp.org/tutorials/tictoc/) --> Arbeitet mit Java, C++ und C#
+Dash --> für die Visualisierung
+
+Example Simulation ist in Web-Artikel (druchführung in dem OMNet++ Programm, oder mittels der cmd)
+Visualisiert wird es im Browser unter http://127.0.0.1:8050/
