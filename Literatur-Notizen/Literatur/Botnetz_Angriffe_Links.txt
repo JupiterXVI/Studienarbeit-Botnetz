@@ -1,0 +1,12 @@
+UDP Flood Attack
+https://www.ionos.de/digitalguide/server/sicherheit/udp-flood/
+Synflood Attack
+https://it-security-wissen.de/syn_flood_attack.html
+http Flood Attack
+https://www.myrasecurity.com/de/http-flood-attacke/
+PING Flood Attack
+https://www.cloudflare.com/de-de/learning/ddos/ping-icmp-flood-ddos-attack/
+DNS Amplification
+https://www.cloudflare.com/de-de/learning/dns/what-is-recursive-dns/
+spam
+https://www.cloudflare.com/de-de/learning/bots/what-is-a-spambot/
