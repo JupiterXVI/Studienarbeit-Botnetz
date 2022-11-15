@@ -1,4 +1,6 @@
 BSF - Botnet Simulation Framework
+
+Artikel:
 (https://hakin9.org/bsf-botnet-simulation-framework/)
 Umgebung um Schutzmechanismen gegen Botnetze zu erproben
 
@@ -11,3 +13,6 @@ Dash --> für die Visualisierung
 
 Example Simulation ist in Web-Artikel (druchführung in dem OMNet++ Programm, oder mittels der cmd)
 Visualisiert wird es im Browser unter http://127.0.0.1:8050/
+
+Umsetzung:
+Verwendung von Virtaulbox mit Ubuntu 20.04 für OMNet++ -> Windows Applikation hat einzelne Linker Probleme, die einen Troubleshooting Aufwand mit sich ziehen würde.
