@@ -1,0 +1,56 @@
+Einleitung:
+Botnet Verwendungszweck:
+ - versenden von Spam-Nachrichten
+ - Diebstahl von persönlichen und finanzbezogenen Daten
+ - Ausführen von DDoS Atacken
+ - Weiterverbreiten von dem Bot-Code auf anderen Maschinen
+
+Hintergründe:
+C&C Channels (Style):
+ - Internet Relay Chat (IRC)-basiert - push-basiert
+ - HTTP-bastiert - pull-basiert
+ - Peer-2-Peer-basiert - nutzt Proxy zur Kommunikation mit C&C
+Fas Flux:
+ - DNS-Technik -> Botmaster verändert kontinuierlich seine Proxy, die entsprechende Adress muss von den Bots gesucht werden
+			-> wenn Bot entdeckt wird ist das retliche Botnetz geschützt
+
+Bontet Srkennungs Versuch:
+Intrusion detection Systems (IDS):
+ - Host-basierent -> suche nach Botnetz beim individuellen Host -> Betrachtet Netzwerkfverhalten der eigenen Maschine
+			-> Botnetzverhalten muss bekannt sein
+ - Netzwerk-basierend -> Botnetzverhalten nicht muss bekannt sein
+				-> betrachtung des Netzwerkverhaltens aller Hosts, Infizierte Hosts verhalten sich ziemlich gleich
+				-> nicht infizierte Hosts haben unterscjiedliches Netzwerkverhalten
+ - Hybrid
+Der C&C style ist über viele Botfamilien ähnlich -> Möglickeit vollkommen neue Botnetze zu finden
+
+Versuch/Hoffnung:
+C&C style ist für verscheidene Botfamilien ähnlich
+ - hat damit das Potetioal neue (unbekannte) Botnetze zu finden
+Intrution Detection System (IDS)
+ - anomaly detection -> erkennt abweichungen vom normalen Verhalten -> gut um neue Infektionen zu erkennen
+ 	- Host-Basierend -> Sammeln von Netzwerkeigenschaften, vergleicht mit neuen Verhalten (des Hosts), gibt es sich wiederholende Verhalten (und sind diese ganz gleich Aufgebaut)
+					-> Problem wenn das Botnetz encypted Kommuniziert
+				-> Verbindung zu C&C server einrscheint als persistend aufgrund der häufigen signale stammend vom Bot
+					-> Virenschutz sperrt Verbindung -> User kann Whitelisten (solange sie einfach zu Warten ist)
+  	- Netzwerk-Basierend (z.B. BotSniffer, BotMiner) -> Das ganze Netzwerk wird betrachtet, Bots verhalten sich untereinander gleich
+					-> BotMiner kategorisiert: communication activity, malicious activity
+						-> Problem: es müssen bereits mehrere Hosts infiziert werden
+
+Datensammlung:
+Um einen Botnetz-Klassifizierer zu trainieren müssen gute und schlechte Trainingsdaten vrohanden sein
+	-> Normaler Verkehr - Weitflächiges und zeitlich genügende Aktivitäts-Daten (mit libcap-based packet capture program)
+	-> Botnetz Verkehr - Bot auf VM - verhaltensdaten sammeln mit opencource ClamAV Antivirus-Tool
+
+Datenverarbeitung:
+Vorgehen zur Erstellung einer Klassifikator-Pipelin:
+ 1 - Sammle Netzwerkverkehr 
+ 2 - Teile Verkehr in einzelnen "Unterhaltungen" auf
+ 3 - Teile "Unterhaltungen" auf Werte auf und erstelle dementsprechend representative Objekte 
+ 4 - Filtere Objekte heraus die nicht Persistent sind (Verbindung länger offen als Unterhaltung)
+ 5 - Leite die Objekte zum Botnetz-Klassifikator weiter
+
+Resultat:
+Random-Forest-Klassifizierer:
+ - Domain-basiert -> 0.929 richtig, 0.078 false positive
+ - IP-basiert -> 0.945 richtig, 0.038 false positive
