@@ -1,0 +1,9 @@
+Grundgedanke:
+Schreiben eines E-Mail Wurms-> über irgendeinen Weg (E-Mail-Anhnag) wird eine (executable) Python Datei
+Die Datei enthält funktionen die von dem Serverseitigen gegenstück aufgerufen werden können (Die Kommunikation läuft über die python Socket-Bibliothek)
+Das Executable beinhaltet ebenfalls ein shell-Code, der mittels Metasploit ezeugt wurde, der eine reverse shell öffnet und eine Verbindung zum Angreifer-Server aufbaut.
+
+Reverse-Shell:
+Ein Komprometierter Rechner im Netz (Mittels E-Mail wurm) selndet eine Verbindungeanfrage an deine Server außeerhalb der Firewall, und frägt bei diesem an Befehle zum eignenen Ausführen zu erhalten
+
+Die Befehle (An den "Bot") werden innerhalb des Python-Executables beschrieben und derern Aufrufe befinden sich im Python-Executable auf dem Angreifer-Server
