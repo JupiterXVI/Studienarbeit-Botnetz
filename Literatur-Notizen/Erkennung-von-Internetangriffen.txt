@@ -1,0 +1,73 @@
+Einleitung:
+Es gibt verschiedene Arten von Internetangriffen
+ - Würmer
+ - (daraus folgende) Distributed Denial-of-Service Angriffe (DDoS)
+2006 Erpressung eines Homepage-Betreibers um $50.000 (mit DDoS)
+2008 ca. 190.000 DDoS-Angriffe mit $20 Milionen Gewinn
+-> ggf heuere Werte suchen
+
+Gliederung:
+Mit Hilfe von Simulationsumgebung lassen sich:
+ - Maßnahmen auf Netze schneller Implementieren
+ - schneller auf reale Netze umsetzen
+
+Terminologie:
+Wurmausbreitung - verbrietet sich selbstständig innerhalb kurzer Zeit auf großer Fläche im Netz
+
+Bedrohung im Internet:
+Botnetze nutzen "neue" Schwachstellen wie:
+ - Forensoftware phpBB
+ - Injection-Angrffe auf MySQL-Datenbanken
+Botnetze nutzen "häufige" Fehlkonfigurationen
+Bezwecken:
+ - Erpressung
+ - Identitiätsdiebstahl
+ - versenden von Spam-E-Mails
+ - audführen von Denial-of-Service Angriffen -> Flash Crowd-Effekts (ähnlich DDoS)
+
+Denial-of-Service-Angriffe:
+Ziel: Erreichbarkeit von einem oder mehreren Diensten eines Opfers einzuschränken oder zu verhindern
+Methode: Überfluten besimmter Ressourcen (Speicher, Rechenzeit) z.B. mit massenhaften Anfragen
+Klasse 1 Angriff - gegen einzelenes Opfer
+ -> Ping of Death: nutzt Fehler im IP-Protokoll (ICMP-Dateneinheit mit unzulässiger Länge)
+				-> Opfer wird temporeär vom Netz getrennt
+Klasse 2 Angriff - gegen genze Infrastruktur
+ -> TCP SYN-Anfriff: nuntzt 3-Way-Handshae, startet Verbindungen und schließt diese nicht (Abwarten bis Timeout)
+				-> Speicherplatz für offene Verbindungen läuft voll
+				-> Dienst ist nicht mehr ereichbar
+ -> DoS: überlasten der Bandbreite mit massenhaftem Senden von Daten
+		- Schwachstelle: Auffällig kommend von einem Host, und Upload << Download
+ -> DDoS: Lösung für DoS -> nutzt Zombies (convertiert mit Wurm) senden von Daten
+				-> nutzt Reflektoren die Daten nur weiterleiten
+				-> Anfragen wirken nicht böswillig
+
+Wurmausbreitung:
+E-Mail-Wurm - nicht ohne menschliche Interaktion zu verbreiten
+			-> mit Phisching, Schadcode im Anhnag einer E-Mail
+Klassischer-Wurm - ohne menschliche Interaktion, sucht selbsständig nach verwundbaren Systemen
+			-> nutzt Sicherhietslücken und Fehlkonfigurationen
+			-> testet alle IP-Adressem im System ab, nach Schachtellen
+			-> ggf. kann weiteren Schadcode von geöffnetem Angreifer-Server laden
+
+Wurmarten:
+ - Morris-Wurm (Klassisch)
+ - Red-Wurm Klassisch)
+ - Nimda-Wurm Klassisch)
+ - Slammer-Wurm Klassisch)
+ - Melissa-Wurm (E-Mail)
+
+Omnet++:
+Simulator für Kommunikationsnetze - kostenfrei zum akademischem Nutzen
+Modellierung ist sehr flexibel - grafische Erstellung von Modellen möglich
+Basierend auf C++ - Parametrisierung und Simulation erfolgt über Python
+Objektorientiert realisiert
+Ergebnis-Simulator - Nachrichten laufen zeitdiskret - Simulation nur von zeitpunkten mit eintetenden Ereignissen
+Modelle basieren auf hierachischer Strukturierung
+Aufbau:
+Innerhalb eines Netzwerks (System Module) gibt es Simple module (realisieren Algorithmen und Protokolle),
+Compound Module bestehen aus mehreren simplen Modulen. 
+Kommunikation läuft über In-Output Ports (Gates), Gates werden mit Links (oder auch Connections) miteinander verknüpft
+Die versendeten Datenpakete werden als Messages bezeichnet.
+Zur beschreibung des Netzwerkaufbaus wird eine .ned-Datei benutzt (Network Description Language)
+Modul- und Rahmenparameter zur Simulation werden über die omnetpp.ini deniniert.
+Erweiterbar durch Frameworks wie "INET" (für TCP/IP-basierte Schichtenarchitektur)

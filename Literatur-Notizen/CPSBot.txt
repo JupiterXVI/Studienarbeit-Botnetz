@@ -24,3 +24,26 @@ C&C Infrastructur -> Botmaster
 C&C Networkarchitektur:
 Zentralisiert -> ein Botmaster server -> Single-Point-of-Failure
 Dezentralisiert -> Peer-to-Peer Komunikation für ein Überliegendes Kontrollsystem 
+
+Gefahr im IoT Bereich:
+Cyberphysische-Systeme - meist Gesteuert über das MQTT Protokoll mit dem PubSub Modell
+	-> Pub - Sender; Sub - Empfänger, Broker - Verteilung -> Asyncrone Mommunikation
+		-> Vorteile von PubSub - Flexible coordination, Cormpatibility, 
+	-> Übernahme uns auslehsen von Sensorendaten oder sogar Interktion mit fremden Geräten
+
+Beispielatacke auf ein zentral gesteueretes System - verwendet Modbus/TCP Protokoll
+
+Grundideen zur Botentwicklung:
+-> Infiziere/Erweitere das Botnetz
+-> Installiere eine Grundlegende Strucktur eines Bots
+-> Spezialisieren des Bots, abhänging von dem Verwendungszweck und der Leisung des Hosts
+-> Einstellung der Angriffsweise - Viele Daten auf einmal (Schnell, aber auffällig), oder wenige Daten (Langsam, unauffällig)
+
+Mögliche Bot Spezialisierungen:
+-> Infiltrator - able to passively observe trac, actively send payloads, forward trac to another network interface
+-> Forger - tampers with the data coming from sensors, actuators
+-> controller - adversarial control of the target system
+-> Broker - to coordinate the CPSBot,  sends event information to all the botnet nodes
+-> Pub - send data over the botnet network asynchronously (publish an aggregate of sensor values)
+-> Sub - Each Sub might subscribe to any information exchanged in the CPSBot network, and get it on-demand, without sending a request all the times
+Pub functionality, the Sub functionality is typically implemented by all CPSBot nodes
