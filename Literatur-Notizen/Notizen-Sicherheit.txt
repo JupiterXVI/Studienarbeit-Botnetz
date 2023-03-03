@@ -1,0 +1,57 @@
+PC-Welt:
+Steuerung von Bots über Twitter (Php-Scripting)
+Infection von rechnern mit Mail, Freiwilliger Download, Download einer Raubkopie legitter Programme plugin im browser, usb-stick
+Bots finden mit entsprechenden Tools
+	Bootmedium mit ISO-Abbild ersetllen von Antivirushersteller: Avira, F-Secure oder Panda Security
+sicherster weg Bot zu entfernen ist eine neu aufsetzen
+
+
+Heise:
+Malvertising-Kampnage über Google-Ads
+Häufige auftritte hinter Ads für Adobe Reader, Gimp, Microsoft Teams, OBS, Slack und Thunderbird
+Möglich dur hacken von Ad-Servern
+Vermutung auf Malwaretising als Dienstleistung im Darknet
+Google hat schwierigkeiten Malware drausen zu halten (bekämpfen durch neue Zertifizierungsregeln reicht allein nicht aus)
+
+Malwaretising ist ein konstates Problem, aber es ist selten das Ad-Server angegriffen werden.
+
+
+Ionos:
+Drive-by-Infection -> Laden einer Infizierten webseite o.ä.
+
+Positiver nutzen von Botnetzen -> Internet Relay Chat (IRC) oder Rechenkapazität für Forschung
+							-> nachteil an IRC -> Single Point of Failure
+
+Moderne Botnetze:
+Auch häufihger Begriff in der Literatur "Mothership" -> Botmaster
+Reste Bots Im kontext von ICR 1993
+Botnetzbetreiber bezeichnet als "Bot Herder"
+Beispiele für gutartige Botz: Webcrawler wie der Googlebot oder der NickServ im IRC.
+Idee: Wir könnten noch einen Abschnitt schreiben zur Abgrenzung von Botz zu Viren und Würmern
+Tarnung der Bots durch root-kids -> Dateien können aus den Verzeichnissen verschleiert werden -> Virenscanner durchsucht diese nicht.
+Virenscanner für Maschinen mit VMs erkennen Bots, da diese auf einer anderen Ebene laufen -> (stand 2009) keine bekannten Bots die Virtuallisierte hardware nutzt
+Single-Flux -> IP-Adressen von Bots werden in DNS Servern abgelegt (A-Record) , meist ”Bullet Proof DomainName“ benötigt damit die Domäne nicht durch kleine Beschwerden gespüerrt wird
+Dopple-Flux -> verwendung mehrerer DNS-Serverine beschwerden (Screenshot)
+P2P -> vorteil ist die Verzeilung der der Nachrichten untereinander, Botmaster (C&C) bildet anlaufstelle für Strafferfolger
+		-> Bootstraping, eine Methode um einem neuen Bot seine Nachbaren vorzustellen, Mitgebeb bei der Infection oder durch verbinden mit einem bestimmten Netz (Gnutella)
+Verschiedene Botnetze über die Zeit
+Idee: Wege wie ein Botnetz sein Überleben Sichert (zb Versteckt) -> Rootkit, einspeichern in Register, Suche neuer Domänen, selbstzerstörung wenn VM erkannt wird, verschlüsselte Kommunikation über wechselnde Ports
+Idee: Verschiedene Botnetze "nachstellen" und deren Besonderheiten hervorheben
+Vorbereitung eines Netzwerks auf eine ddos atacke:
+	- Verfügbar machen von TCP-SYN-Coockies
+	- Einsatz von Packetfiltern
+	- Bereitstellung von Proxies unf Reverse Servern
+	- Einsatz von Load Balencing
+Theoretisch währe es möglich den Bot zu übernehmen und einen Befehl zur Selbstabschaltung abzugeben (teilweise schwierug wegen rechtlichen gründen und wegen der Kopplung zum Betriebssystem)
+
+
+Kirpoz:
+Idee: Gesetzlicher Hintergrund zur Botnetznutzung
+
+
+
+
+Abeschnitt:
+Verbreitung von Schadsoftware:
+Der Anreiz reicht dabei von Geldversprechungen, behördlichen Warnungen, Meldungen eines Services wie Microsoft oder Google, bis zu Drohungen. Häufig wird ein zeitlicher Handlungsrahmen gesetzt, um Stress im Opfer hervorzurufen und somit ein kritisches Hinterfragen zu vermeiden. Geht der Nutzer der Aufforderung nach und klickt auf den Anhang oder Link installiert er dabei unbewusst die Schadsoftware auf seinem Gerät.
+Neben Phishing setzen Kriminelle ebenso auf dubiose Werbung im Internet oder den Download angepasster Versionen bekannter Programme wie Word, Gimp oder diverse Cleaner. So nutzen sie ebenso im Firmenumfeld die Neugier der Mitarbeiter ... USB-Sticks ...

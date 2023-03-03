@@ -1,0 +1,60 @@
+Botmaster:
+	ist eine Erwiterung eines einfachen Moduls
+	kann:
+		inizialisiert werden
+		die Bots updaten
+		Nachrichten an die Bots schicken
+GlobalNodeList:
+	wird von vielen Klassen abgerufen um zugriffe auf unterschiedliche Nodes zu ermöglichen
+	diese maped mit einer Liste auf Pointern auf die Nodes
+
+MessageHandler:
+	Basic:
+		Ist das Interface, da die aufgaben nicht ausimplementiert sind
+	Crawler:
+		Nutzt einen Crawler implementiert Aktionen auf verschiedene Nachrichten
+	Simple:
+		einfachste Implementierung um das Sende- und Empfangverhalten- von Nachrichten über Nodes in eine Klasse auszulagern
+Message:
+	Basic:
+		Grundstruktur einer Nachricht
+	Simple:
+		Nachrichten die keine Werte Übertragen sondern durch ihren Typ und die Sende/Zieladresse besimmt werden
+Monitoringdata:
+	Sensordaten in einer Datei zusammensammel (Sendebereit speichern)
+Nodes:
+	Verschiedene Arten von Komponenten
+	Beschreibt die Aktionen die auf den Bots oder den Aktiven Komponeten ausgeführt werden können
+Router:
+	übernimmt die Nachrichtenübermittlung durch Zusammenstellen der Nachricht mit Header und Parametern
+SelfMessages:
+	Nodes erhalten Anweisungen durch Nachrichten. -> Um aus einer eigenen Aktion andere Aktionen Lokal auszuführen werden Nachrichten an self geschickt
+
+	
+
+
+Extra/Nötig:
+BasicID:
+	Klasse die einen ID-Wert beschreibt und erlaub auf ihn zuzugreifen
+Churn: (Verstehe ich nicht ganz)
+	ChurnBase:
+		Verwaltet Liste inaktiver Nodes
+	LifetimeChurn:
+		macht bestimmbar wie viele Nodes wie lange leben
+	NoChurn:
+		wirkt wir LifetimeChrun nur anders ausprogrammiert
+	StaticNoChurn:
+		NoChurn nur ohne Inizialisierung
+ChurnInitialicer:
+	
+IPAdress:
+	Klasse die eine IPAdresse angibt und diese abrufbar und vergleichbar macht
+
+MembershipManager:
+	Leere Klasse
+
+Neighborlist:
+	SimpleEntry:
+		Klasse die beschreibt eine Edentitäten mit der komuniziert werden kann
+	SimpleNL:
+		Klasse die beschreibt welche Edentitäten mit einander Komuniziert haben

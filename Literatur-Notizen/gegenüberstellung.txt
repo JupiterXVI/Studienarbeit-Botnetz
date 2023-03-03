@@ -1,0 +1,43 @@
+NS2
+price: free
+jahr: 1989 
+von: University of California and Cornell University
+läuft auf: c++ und otcl
+verwendete netzwerk konfigurationsstrache: tlc script
+Vorgehensweise bei der Konfig: Mit der verwenug vorgefertigter Module wie Nodes oder Komunikationskanäle können Netzwerke in Szenarien Arbegebaut werden, dabei ferden die Elemente in variablen gespeichert und funktionen auf diese variablen ausgeführt (Nach der Simualtion kann durch auführen des codes eine Animation Visualisiert werden)
+stärke: war eine frühes Simulations-Tool welches Fortschritte in der Untersuchungen gebraucht hat
+quelle: Issariyakul, Teerawat, and Ekram Hossain. Introduction to network simulator NS2. Springer, 2011. || https://nsnam.sourceforge.net/wiki/index.php/User_Information
+bild: https://youtu.be/4YBNBYbC09E?t=98
+
+NS3
+price: free
+jahr: 2008
+von: Ist jetzt ein Open Source Projekt unter: ns-3 Project 
+läuft auf: Python und C++
+verwendete netzwerk konfigurationsstrache: C++
+Vorgehensweise bei der Konfig: Innerhalb von c++ Dateien können mit einfachen Basisbausteinen wie Nodes (als objekte) und Verbindng Agenten netzwerke und Kommunikations zenarien definieren und diese Loggen (Visualisierung is seperat möglich z.B mit openCource NetAnim) )
+stärke: insich geschlossener c++ code und abwertskompartibilität zu ns2
+quelle: Kabir, M. H., Islam, S., Hossain, M. J., & Hossain, S. Detail, Comparison of Network Simulators || https://www.nsnam.org/about/ (28.12.22) || https://www.nsnam.org/about/news-events/ (28.12.22)
+bild: https://youtu.be/3n0M-7-6IMM?t=744
+
+Netsim
+price: Kostenplichtig
+jahr: 2005 
+von: boson
+läuft auf: c
+verwendete netzwerk konfigurationsstrache: drag and drop 
+Vorgehensweise bei der Konfig: Mittels der Gui werden Netzwerke aufgebaut sowie Port und Protokoll configurationen etroffen
+stärke: beinhaltet lernaufgaben zur vorbereitung auf CCNA Prüfungen (simuliert cisco systeme)
+quelle: Kabir, M. H., Islam, S., Hossain, M. J., & Hossain, S. Detail Comparison of Network Simulators ||
+bild: https://youtu.be/CLldIsyOCHc?t=356
+
+Omnet++
+price: free
+jahr: 2.0 wurder 2001 veröffentlicht
+von: OpenSim Ltd.
+läuft auf: c++
+verwendete netzwerk konfigurationsstrache: c++ oder java oder C#
+Vorgehensweise bei der Konfig: ...
+stärke: verwendung vorgefertigter module oder das schreiben eigener module und derren verhalten
+quelle: https://omnetpp.org/posts || Sundani, H., Li, H., Devabhaktuni, V. K., Alam, M., & Bhattacharya, P. (2011). Wireless sensor network simulators a survey and comparisons. International Journal of Computer Network
+bild: https://youtu.be/ntxgcxEcvxM?t=833
