@@ -1,0 +1,8 @@
+WEGE UM SICH ZU VERSTECKEN
+
+Piercing the hawkeye:
+tools zum verstecken von Viren -> DataScrambler "to go FUD (Fully UnDetectable)"m Cyberseal
+counter services zu AV-Scanns:  Scan4You, RazorScanner, NoDistribute -> scann your malware to check if AVs can detect it
+
+
+AFX, Vanquish and HackerDefender
