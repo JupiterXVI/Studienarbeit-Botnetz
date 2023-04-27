@@ -1,0 +1,64 @@
+Die Gegenmaßnahmen sind in der Regel nicht für das Zerstören des Botnetzes sondern Wege um den Botmaster in dessen erfolgreichen Nutzung zu behindern.
+Ein Botnetz bitet dabei zwei Angriffsvektoren, dessen Kommunikationsinfrastucktur oder dessen Rentabilität. 
+Auf struktureller Ebene existieren ebenfall Konzepte die inherent mehr Sicherheit in ein Netzwerk bringen können. 
+Dabei greifen verschiedene Länder den Umgang mit Botnetzen zu unterschiedlich Maßnahmen.
+
+Verteilen von falschen oder verfolgbaren Identitäten
+Vorerst ist zu bedenken, dass Straftaten in der Cyberkriminalität wie ein Großtel anderer Straftaten durch eine Versprechung auf finanziellen Gewinn motiviert sind. 
+Ein haupt Handelsgut der Botnetzbetreiber, sind gestohlene Identitäten welche aus den infizierten Hosts extrahiert wurden.
+Sammelt ein Bot die entsprechenden Daten, müssen diese erst an den Botmaster übermittelt werden, damit dieser die Gegenzahlung einstreichen kann.
+Um nicht über den direkten Transport der Daten auch sich aufmerksam zu machen werden "Dropzones"(Plohmann D. et. al., 2011, S.81) eingerichtet. 
+Bots senden die gesammelten informationen an die Dropzone und der Botmaster ist daraufhin in der Lage die informationen einzusammeln.
+Indem bereits eine kleine Anzahl an gefälschten oder rückverfolgbaren Identitäten in der Dropzone injeziert werden, schädigt das den Kunden welcher die gestohlen Identitten eingekauft und verwendet hat.
+Dies lässt den Botnetzbereiber als unzuverlässigen Anbieter erscheinen, wodurch dieser Kunden und somit seine Einnahmequelle verliert.
+
+BGP Blackholing, DNS Sinkholing und Direct Takedown of C&C-Server
+Eine Methode um die Botnetze für Die Botmaster unbenutzbar zu machen nutzt den Strukturellen Aufbau der zentralverwalteten Botnetze gegen sie. 
+Beide Metthoden setzen vorraus dass das Botnetz analysiert wurde und der Command & Control Knoten identifiziert werden konnte. 
+Das Border Gateway Protocol (BGP) ist im Einsatzt um die Routing Tabellen der ISPs zu verwalten und erlaubt so die Kommunikation derer autonomer Systeme.
+Das Domain Name System ist für die Auflösung der Ressourcenadressierung im Internet zuständig, womit auch dieses ein esenzieller Bestandteil der Komminikation im Internet ist. 
+Sink- oder Blackholing beschreibt dabei ein ähnliches verhalten. 
+Der C&C-Sever wird isuliert, indem die auf ihn gerichteten Routen umgeleiet oder abgeschnitten werden, womit dieser Knoten die fähigkiet verliert Informationen zu senden oder zu empfangen.
+Botnetze angelehnt an das IRC-Prinzip mit einer zentralen Verwaltung werden vollkommen Handlungsunfähig.
+jedoch selbst wenn die Bots keine Befehle erhalten können, blieben die betroffenen Hosts weiterhin Infiziert.
+Hierbei ist zu berücksichtigen ob der Server ausschließlich Maleware bereitstellt oder ob dieser ebenfalls legitime Services bereitstellt.
+Ist das der Fall kann der ISP den Server Isoslieren oder sogar ganz aus dem Netz entfernen.
+Im Falle des Mehica Twitter Botnetzes, welcher mittels der Twitter RSS Web-Feeds kommunizierte (Plohmann D. et. al., 2011, S. 82).
+
+Vorgehen gehen Peer-to-Peer Botnetze
+Auch Peer-to-Peer Botnetze haben ihren Anfgriffsvektor im Kommunikationsmechanismus.
+Hierbei lässt sich die Unveränderlichkeit eines einmal aufgebauten Netzes ausnutzen, um in diesem Instablilitäten zu verursachen.
+Bots bewerben iher anwesenheit im Netz, um Verbindungen mit weiteren Knoten aufzubauen.
+Einmal verbunden werden die gespeicherten Kontaktpunkte nicht wierder überschrieben und der Bot wird unflexibel sobalt seine aus Speicherbedarfsgründen begrenzte Liste gefüllt ist.
+Wird nun das Botnetz mit invaliden Knotenangaben oder duplikaten geflutent, füllen diese die Listen der Bots. 
+Die Botz verlieren somit ihre Kommunikationesfähigkiegt, durch nicht erreichbare Nachbarknoten oder mehrdeutige einträge in den Routing-Tabellen (Plohmann D. et. al., 2011, S. 88-89).
+Eine Sybil Attacke verwendet ein ähnliches Vorgehen, um die Kontrolle über das Botnetz zu erlangen.
+Durch Einschleusen kontrollierter Peers verteilt über das gesamte Peer-to-Peer Botnetz neue Knoten akzeptiert.
+Indem sich diese als orginale und unzusammenhängende Teilnehmer ausgeben, stellen diese schließlich genug Verbindungen zu Botmaster kontrollierten Hosts auf um dessen Einfluss zu überbeten. 
+Plohmann D. et. al. beschreibt dies als eine Vergiftung des Botnetzes durch Sybils mit der Zeit (2011, S. 89). 
+
+Walled Garden Konzept
+Es gibt breits Kozepte um das Internet oder weite Teile dessen vor Botnetzen und Maleware abzusichen.
+Eins dieser Strategien wir als Walled Garden oder Closed Plattform bezeichnet und zeilt auf eine sichere Netzumgebung ab, das Malware auf locale Subnetze beschränkt.
+Hierbei sollen Gefahrenquellen abgewendet werden indem die zugänge zum Netz stärker Kontrolliert werden.
+Dabei folgt das Schema nach Plohmann D. et. al. den drei Schnritten "detection, notification and remediation" (2011, S. 87). 
+Wurde mittels Honeypods oder DNS basierten Verfahren eine Gefahrenquelle, wie ein infizierter Host ausgemacht, steht dieser unter Karantäne.
+Er wird von der Netzwerkkomunikation isoliert und keine dessen ausgehenden Nachrichten werden nicht weitergeleitet.
+Der ISP hat daraufhin die Möglichkeit den betfroffenen Host über die Situation zu informieren und ihn auf eine selbst bereitgestellt Seite mit hilfreichen Tipps umzuleiten.
+Der volle Zugang wird dem Host erst dann gewährt wenn dieser die Gefahrenquelle bereinigt hat.
+Dennoch ist zu berücksichtigen, dass Nutzern nicht auf Dauer der Netzwerkzugang verwehrt werden kann, da beispielsweise Notrufsignale des Nutzers sonst nicht die Rettungsdienste erreichen.
+Um einen totalen Ausschluss zu vermeiden werden Besuchsperioden eingerichtet. 
+
+Behördliche Uberwachung
+Verschiedene Länder haben breits Behörden eingerichtet um Nutzern, die einen Verdacht haben selbst Teil eines Botnetz zu sein oder Infromationen über ein Botnetz haben, mit helfender Hand zur seite zu stehen. 
+In Deutschland handelt es sich dabei um das Anti-Bot-Beratungszentrum welches unter der Adresse www.botfrei.de erreichbar ist. 
+Die Webseite wirb, unterstützt von diversen Institutionen, für die Sicherheit im Netz und bietet Infromatioen zum umgang mit Botnetzen.
+Australiens Ansatz bestand in der Australian Internet Security Initative (AISI).
+Dieses Programm sammelte Produkte in einer Liste zur Sicherung verschiedener Systemtypen, wobei die Australian Certification Authority (ACA) diese gegengeprüft hat (1).
+Japan beteiligt sich mit ihrem Cyver Clean Center aktiv in der Beseitigung von Botsoftware in den Netzen ihrer ISPs.
+Diese sammeln Proben und Verhaltensmuster von Botnetzen im Netz und erstellen eine Werkzeug zur Entfernung des Schadcodes.
+Die ISPs werden daraufhin infromiert ihre Kunden über die Situation in Kenntnis zu setzen und auf das Entfernungswerkzeug hinzuweisen welches zum Herunterladen zuf Verfügung steht.
+
+Quelle:
+1 - https://www.cyber.gov.au/resources-business-and-government/assessment-and-evaluation-programs/australian-information-security-evaluation-program
+2 - https://www.telecom-isac.jp/ccc/en_index.html
