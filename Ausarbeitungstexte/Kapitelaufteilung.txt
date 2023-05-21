@@ -1,0 +1,21 @@
+Heiko:
+Kapitel 1
+Kapitel 3
+Kapitel 4
+Kapitel 6
+Kapitel 7
+Kapitel 10
+Kapitel 12
+Kapitel 14
+Kapitel 16
+Kapitel 18
+Jakob:
+Kapitel 2
+Kapitel 5
+Kapitel 8
+Kapitel 9
+Kapitel 11
+Kapitel 13
+Kapitel 15
+Kapitel 17
+Kapitel 19
